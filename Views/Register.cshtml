@@ -1,0 +1,20 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register Voter";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Message != null)
+{
+    <p>@Model.Message</p>
+}
+
+<form method="post">
+    <div>
+        <label>ID Number:</label>
+        <input asp-for="IdNumber" class="form-control" />
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
